@@ -50,29 +50,28 @@ The objective is to demonstrate how security teams can:
 ## **2. Lab Architecture**
 The vulnerability automation pipeline follows this workflow:
 
-text
-`             CISA KEV FEED ` 
-`                    | ` 
-`                    v `
-`        THREAT INTELLIGENCE INGESTION ` 
-`                    | ` 
-`                    v ` 
-`           DATA NORMALIZATION ` 
-`                    | ` 
-`                    v ` 
-`            ASSET CORRELATION ` 
-`                    | ` 
-`                    v ` 
-`          CONTEXTUAL RISK ENGINE ` 
-`                    | ` 
-`                    v ` 
-`            RISK PRIORITIZATION ` 
-`                    | ` 
-`                    v ` 
-`          AUTOMATED REPORTING ` 
-`                    | ` 
-`                    v ` 
-`               CSV / HTML ` 
+             CISA KEV FEED
+                    |
+                    v
+       THREAT INTELLIGENCE INGESTION
+                    |
+                    v
+          DATA NORMALIZATION
+                    |
+                    v
+           ASSET CORRELATION
+                    |
+                    v
+         CONTEXTUAL RISK ENGINE
+                    |
+                    v
+          RISK PRIORITIZATION
+                    |
+                    v
+         AUTOMATED REPORTING
+                    |
+                    v
+              CSV / HTML 
 
 ### **Workflow Description**
 1. **Threat Intelligence Ingestion:** Retrieve vulnerability intelligence from the CISA KEV catalog.
@@ -102,32 +101,32 @@ text
 | Redis | Planned caching and job staging |
 | Git | Version control |
 | GitHub | Source code hosting and documentation |
-## **4. Repository Structure**
-text
 
-`vuln-automation-lab/` 
-`│` 
-`├── app/` 
-`│   ├── ingest.py` 
-`│   ├── correlate.py` 
-`│   ├── risk_engine.py` 
-`│   ├── reporter.py` 
-`│   ├── assets.csv` 
-`│   └── requirements.txt` 
-`│` 
-`├── feeds/` 
-`│` 
-`├── db/` 
-`│` 
-`├── output/` 
-`│` 
-`├── docs/` 
-`│` 
-`├── docker-compose.yaml` 
-`├── requirements.txt` 
-`├── run_poc.py` 
-`├── README.md` 
-`└── .gitignore` 
+## **4. Repository Structure**
+
+vuln-automation-lab/
+│
+├── app/
+│   ├── ingest.py
+│   ├── correlate.py
+│   ├── risk_engine.py
+│   ├── reporter.py
+│   ├── assets.csv
+│   └── requirements.txt
+│
+├── feeds/
+│
+├── db/
+│
+├── output/
+│
+├── docs/
+│
+├── docker-compose.yaml
+├── requirements.txt
+├── run_poc.py
+├── README.md
+└── .gitignore
 
 ### **Directory Descriptions**
 
