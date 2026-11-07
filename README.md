@@ -92,7 +92,6 @@ flowchart TB
 | GitHub | Source code hosting and documentation |
 
 ## **4. Repository Structure**
-## Project Structure
 
 ```text
 vuln-automation-lab/
