@@ -1,0 +1,4 @@
+asset_id,hostname,owner_group,software,environment,exposure,business_criticality
+AST-001,prod-web-01.internal,Web-Team,Apache HTTP Server 2.4.49,Production,Internet-Facing,5
+AST-002,prod-db-01.internal,DB-Team,PostgreSQL 13.2,Production,Internal,5
+AST-003,stage-app-02.internal,Dev-Team,Log4j 2.14.0,Staging,Internal,2
