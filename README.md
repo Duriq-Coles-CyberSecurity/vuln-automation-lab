@@ -77,7 +77,6 @@ flowchart TB
 
 ## **3. Technology Stack**
 
-
 | **Technology** | **Purpose** |
 | :---: | :---: |
 | Ubuntu Linux | Lab operating system |
@@ -90,6 +89,7 @@ flowchart TB
 | Redis | Planned caching and job staging |
 | Git | Version control |
 | GitHub | Source code hosting and documentation |
+
 
 ## **4. Repository Structure**
 
@@ -118,7 +118,6 @@ vuln-automation-lab/
 
 ### **Directory Descriptions**
 
-
 | **Directory/File** | **Description** |
 | :---: | :---: |
 | `app/` | Core application modules |
@@ -145,7 +144,7 @@ Ensure the following tools are installed:
 
 ### **Step 1: Clone the Repository**
 bash
-` git clone  `[https://github.com/Duriq-Coles-CyberSecurity/vuln-automation-lab.git](https://github.com/Duriq-Coles-CyberSecurity/vuln-automation-lab.git)`` 
+> `git clone [https://github.com/Duriq-Coles-CyberSecurity/vuln-automation-lab.git](https://github.com/Duriq-Coles-CyberSecurity/vuln-automation-lab.git)'
 
 ### **Step 2: Create a Python Virtual Environment**
 bash
@@ -191,8 +190,12 @@ The main execution script coordinates these modules to demonstrate an automated 
 The demonstration risk engine uses a contextual risk scoring formula:
 
 ### **Risk Calculation**
-text
-`Final Risk Score =` `     CVSS ` `     × EPSS ` `     × KEV Multiplier ` `     × Asset Criticality ` `     × Exposure Multiplier ` 
+
+```text
+
+`Final Risk Score' = `CVSS ` x  `EPSS ` x `KEV Multiplier ` x `Asset Criticality ` x  `Exposure Multiplier` 
+
+```
 
 ### **Demonstration Values**
 
@@ -213,14 +216,14 @@ The current implementation is intended to demonstrate the methodology rather tha
 ## **8. Expected Output Files**
 Following successful execution, the pipeline should generate the following files:
 
-text
-`feeds/` 
-`└── normalized_kev.csv` 
-```output/` 
-`├── correlated_vulnerabilities.csv` 
-`├── prioritized_risks.csv` 
-`└── executive_report.html` 
-
+```text
+feeds/
+└── normalized_kev.csv
+output/
+├── correlated_vulnerabilities.csv
+├── prioritized_risks.csv
+└── executive_report.html 
+```
 ### **Output Descriptions**
 
 | **Output File** | **Description** |
@@ -277,6 +280,7 @@ The following table summarizes the current implementation status of the project.
 - Integrate Redis caching.
 
 - Support persistent vulnerability records.
+
 ### **Phase 4: API and Automation**
 - Develop FastAPI endpoints.
 
@@ -285,6 +289,7 @@ The following table summarizes the current implementation status of the project.
 - Explore workflow orchestration.
 
 - Expand automation capabilities.
+
 ### **Phase 5: Security Dashboard**
 - Develop vulnerability analytics.
 
@@ -322,6 +327,7 @@ The asset inventory and correlation results are simulated. The current risk engi
 | Intelligence Source | CISA KEV Catalog |
 | Automation | Python |
 | Reporting | CSV / HTML |
+
 ### **Focus Areas**
 - Cybersecurity Engineering
 
