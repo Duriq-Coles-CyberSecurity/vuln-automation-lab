@@ -51,8 +51,6 @@ The objective is to demonstrate how security teams can:
 
 The vulnerability automation pipeline follows this workflow:
 
-## System Workflow
-
 ```mermaid
 flowchart TB
     A[CISA KEV Feed] --> B[Threat Intelligence Ingestion]
