@@ -48,39 +48,13 @@ The objective is to demonstrate how security teams can:
 - Create an executive HTML report.
 
 ## **2. Lab Architecture**
+
 The vulnerability automation pipeline follows this workflow:
+
 ## System Workflow
+
 ```mermaid
-flowchart TD
-    subgraph Ingestion_Layer [1. Ingestion Layer]
-        A["fa:fa-rss CISA KEV Feed<br>(External Source)"] == REST API / JSON ==> B[Threat Intelligence Ingestion]
-        B --> C([Data Normalization])
-    end
-
-    subgraph Core_Engine [2. Contextual Processing Engine]
-        C --> D{Asset Correlation}
-        DB[("(fa:fa-database) Asset Inventory<br>(CMDB / Cloud Scanners)")] -.-> D
-        D -- Matched Assets --> E[Contextual Risk Engine]
-        E --> F[Risk Prioritization]
-    end
-
-    subgraph Output_Layer [3. Delivery & Output]
-        F --> G[Automated Reporting]
-        G --> H["fa:fa-file-alt CSV / HTML Reports"]
-        G -.-> I["fa:fa-bell Notifications<br>(Slack / Teams / Jira)"]
-    end
-
-    %% Class Styling & Visual Tweaks
-    style Ingestion_Layer fill:#f4f6f8,stroke:#d1d5db,stroke-width:1px
-    style Core_Engine fill:#f0f7ff,stroke:#bfdbfe,stroke-width:1px
-    style Output_Layer fill:#f0fdf4,stroke:#bbf7d0,stroke-width:1px
-    
-    style A fill:#fee2e2,stroke:#ef4444,stroke-dasharray: 5 5
-    style H fill:#dcfce7,stroke:#22c55e
-    style I fill:#fef9c3,stroke:#eab308
-```
-```mermaid
-graph TD
+flowchart TB
     A[CISA KEV Feed] --> B[Threat Intelligence Ingestion]
     B --> C[Data Normalization]
     C --> D[Asset Correlation]
@@ -88,30 +62,7 @@ graph TD
     E --> F[Risk Prioritization]
     F --> G[Automated Reporting]
     G --> H[CSV / HTML Reports]
-```
-
-             CISA KEV FEED
-                    |
-                    v
-       THREAT INTELLIGENCE INGESTION
-                    |
-                    v
-          DATA NORMALIZATION
-                    |
-                    v
-           ASSET CORRELATION
-                    |
-                    v
-         CONTEXTUAL RISK ENGINE
-                    |
-                    v
-          RISK PRIORITIZATION
-                    |
-                    v
-         AUTOMATED REPORTING
-                    |
-                    v
-              CSV / HTML 
+``` 
 
 ### **Workflow Description**
 1. **Threat Intelligence Ingestion:** Retrieve vulnerability intelligence from the CISA KEV catalog.
